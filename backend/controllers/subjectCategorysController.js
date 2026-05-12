@@ -53,7 +53,7 @@ subjectCategoryController.updateCategory = async (req, res) => {
             isActive
         }, {new: true})
 
-        if (!subjectUpdated) {
+        if (!categoryUpdated) {
             return res.status(400).json({message: "Category not found"})
         }
 
@@ -68,7 +68,7 @@ subjectCategoryController.deteleCategory = async (req, res) => {
     try {
         const categoryDeleted = await subjectCategorysModel.findByIdAndDelete(req.params.id)
         
-        if (!subjectDeleted) {
+        if (!categoryDeleted) {
             return res.status(400).json({message: "Category not found"})
         }
 

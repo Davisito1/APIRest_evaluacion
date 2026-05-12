@@ -3,8 +3,6 @@ import crypto from "crypto"
 import jsonwebtoken from "jsonwebtoken"
 import { config } from "../config.js"
 import nodemailer from "nodemailer"
-import { decode } from "punycode"
-import { model } from "mongoose"
 
 const recoveryPasswordStudentController = {}
 
